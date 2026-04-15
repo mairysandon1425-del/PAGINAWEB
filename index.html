@@ -1,0 +1,118 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Diva Boutique</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+    <h1>DIVA BOUTIQUE</h1>
+
+    <nav class="menu">
+        <a>Todas</a>
+        <a>Vestidos</a>
+        <a>Blusas</a>
+        <a>Jeans</a>
+        <a>Sandalias</a>
+    </nav>
+
+    <div class="carrito" onclick="abrirCarrito()">
+        🛒 <span id="contador">0</span>
+    </div>
+</header>
+
+<h2 class="titulo">DESCUBRE TU ESTILO PERFECTO</h2>
+
+<div class="presentacion">
+    <div class="texto">
+        <h2>Moda que resalta tu belleza</h2>
+        <p>En Diva Boutique creemos que cada mujer merece sentirse segura, elegante y auténtica.</p>
+        <p>Encuentra prendas modernas, cómodas y llenas de estilo para cualquier ocasión 💖</p>
+    </div>
+
+    <div class="carrusel">
+        <img id="slider" src="img/1.jpg">
+    </div>
+</div>
+
+<div class="productos">
+    <div class="card"><img src="img/1.jpg"><p class="nombre">Top </p><p class="precio">$50.000</p><button class="boton">Agregar</button></div>
+    <div class="card"><img src="img/2.jpg"><p class="nombre">Vestido elegante</p><p class="precio">$60.000</p><button class="boton">Agregar</button></div>
+    <div class="card"><img src="img/3.jpg"><p class="nombre">Vestido casual</p><p class="precio">$55.000</p><button class="boton">Agregar</button></div>
+    <div class="card"><img src="img/4.jpg"><p class="nombre">Jeans color cafe</p><p class="precio">$70.000</p><button class="boton">Agregar</button></div>
+    <div class="card"><img src="img/5.jpg"><p class="nombre">Sandalias casuales</p><p class="precio">$65.000</p><button class="boton">Agregar</button></div>
+    <div class="card"><img src="img/6.jpg"><p class="nombre">Sandalias verano</p><p class="precio">$75.000</p><button class="boton">Agregar</button></div>
+    <div class="card"><img src="img/7.jpg"><p class="nombre">Sandalias de noche </p><p class="precio">$80.000</p><button class="boton">Agregar</button></div>
+    <div class="card"><img src="img/8.jpg"><p class="nombre">Jeans negro </p><p class="precio">$85.000</p><button class="boton">Agregar</button></div>
+    <div class="card"><img src="img/9.jpg"><p class="nombre">Corset </p><p class="precio">$90.000</p><button class="boton">Agregar</button></div>
+    <div class="card"><img src="img/10.jpg"><p class="nombre">Conjunto de verano </p><p class="precio">$95.000</p><button class="boton">Agregar</button></div>
+    <div class="card"><img src="img/11.jpg"><p class="nombre">Jeans casual  </p><p class="precio">$100.000</p><button class="boton">Agregar</button></div>
+    <div class="card"><img src="img/12.jpg"><p class="nombre">Sandalias casuales </p><p class="precio">$80.000</p><button class="boton">Agregar</button></div>
+    <div class="card"><img src="img/13.jpg"><p class="nombre">Vestido de fiesta </p><p class="precio">$110.000</p><button class="boton">Agregar</button></div>
+    <div class="card"><img src="img/14.jpg"><p class="nombre">Conjunto en jeans </p><p class="precio">$95.000</p><button class="boton">Agregar</button></div>
+    <div class="card"><img src="img/15.jpg"><p class="nombre">Top casual </p><p class="precio">$100.000</p><button class="boton">Agregar</button></div>
+    <div class="card"><img src="img/16.jpg"><p class="nombre">Conjunto de noche </p><p class="precio">$105.000</p><button class="boton">Agregar</button></div>
+    <div class="card"><img src="img/17.jpg"><p class="nombre"> Bikini  </p><p class="precio">$110.000</p><button class="boton">Agregar</button></div>
+    <div class="card"><img src="img/18.jpg"><p class="nombre">Vestido playero </p><p class="precio">$95.000</p><button class="boton">Agregar</button></div>
+    <div class="card"><img src="img/19.jpg"><p class="nombre">Bikini  </p><p class="precio">$100.000</p><button class="boton">Agregar</button></div>
+    <div class="card"><img src="img/20.jpg"><p class="nombre">Bikini  </p><p class="precio">$105.000</p><button class="boton">Agregar</button></div>
+    <div class="card"><img src="img/20.jpg"><p class="nombre">Bikini  </p><p class="precio">$105.000</p><button class="boton">Agregar</button></div>
+
+</div>
+
+<!-- MODAL -->
+<div id="modalCarrito" class="modal">
+    <div class="contenido-carrito">
+        <h2>🛒 Carrito</h2>
+        <div id="listaCarrito"></div>
+        <h3 id="total">Total: $0</h3>
+        <button>Pagar</button>
+        <button onclick="cerrarCarrito()">Cerrar</button>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-contenido">
+        <div><h3>📍 Ubicación</h3><p>Medellín - Centro comercial el Tesoro </p></div>
+        <div><h3>📞 Contacto</h3><p>300 123 4567</p></div>
+    </div>
+
+    <div style="display:flex; justify-content:space-around; flex-wrap:wrap; margin-top:30px; text-align:center;">
+        <div>
+            <h3>💖 Síguenos</h3>
+            <p>Instagram: @divaboutique</p>
+            <p>Facebook: Diva Boutique</p>
+            <p>TikTok: @divaboutique</p>
+        </div>
+
+        <div>
+            <h3>🚚 Envíos</h3>
+            <p>Envíos a todo Colombia</p>
+            <p>Entrega rápida en Medellín</p>
+        </div>
+
+        <div>
+            <h3>💳 Métodos de pago</h3>
+            <p>Nequi | Daviplata | Transferencia</p>
+            <p>Tarjetas débito y crédito</p>
+        </div>
+
+        <div>
+            <h3>⏰ Horario</h3>
+            <p>Lunes a Sábado: 9:00 AM - 7:00 PM</p>
+            <p>Domingos: Cerrado</p>
+        </div>
+    </div>
+
+    <p class="copy">© 2026 Diva Boutique</p>
+</footer>
+
+<script src="index.js"></script>
+
+</body>
+</html>
