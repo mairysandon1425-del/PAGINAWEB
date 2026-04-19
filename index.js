@@ -11,18 +11,22 @@ setInterval(()=>{
 let carrito = [];
 let contador = 0;
 
-document.querySelectorAll(".boton").forEach((btn)=>{
+document.querySelectorAll(".boton").forEach((btn, index)=>{
     btn.addEventListener("click", ()=>{
         let card = btn.parentElement;
+
         let nombre = card.querySelector(".nombre").textContent;
         let precio = parseInt(card.querySelector(".precio").textContent.replace(/\D/g,""));
+        let imagen = card.querySelector("img").src;
 
-        let existe = carrito.find(p=>p.nombre===nombre);
+        let id = index;
+
+        let existe = carrito.find(p=>p.id === id);
 
         if(existe){
             existe.cantidad++;
         }else{
-            carrito.push({nombre,precio,cantidad:1});
+            carrito.push({id, nombre, precio, imagen, cantidad:1});
         }
 
         contador++;
@@ -50,6 +54,7 @@ function renderCarrito(){
 
         lista.innerHTML += `
         <div class="item">
+            <img src="${p.imagen}" width="40">
             <span>${p.nombre}</span>
             <div>
                 <button onclick="restar(${i})">➖</button>
@@ -64,9 +69,28 @@ function renderCarrito(){
     document.getElementById("total").textContent = "Total: $" + total.toLocaleString();
 }
 
-function sumar(i){ carrito[i].cantidad++; contador++; actualizar(); }
-function restar(i){ carrito[i].cantidad>1 ? carrito[i].cantidad-- : carrito.splice(i,1); contador--; actualizar(); }
-function eliminar(i){ contador -= carrito[i].cantidad; carrito.splice(i,1); actualizar(); }
+function sumar(i){
+    carrito[i].cantidad++;
+    contador++;
+    actualizar();
+}
+
+function restar(i){
+    if(carrito[i].cantidad > 1){
+        carrito[i].cantidad--;
+        contador--;
+    }else{
+        contador--;
+        carrito.splice(i,1);
+    }
+    actualizar();
+}
+
+function eliminar(i){
+    contador -= carrito[i].cantidad;
+    carrito.splice(i,1);
+    actualizar();
+}
 
 function actualizar(){
     document.getElementById("contador").textContent = contador;
