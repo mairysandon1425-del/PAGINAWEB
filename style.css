@@ -107,8 +107,8 @@ header h1{
 /* IMAGEN */
 .card img{
     width:100%;
-    height:260px; /* 🔥 tamaño grande */
-    object-fit:contain; /* 🔥 no se corta */
+    height:260px; /*  tamaño grande */
+    object-fit:contain; /* no se corta */
     border-radius:15px;
     display:block;
     box-shadow:0 10px 25px rgba(0,0,0,0.25);
